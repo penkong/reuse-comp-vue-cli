@@ -47,7 +47,7 @@
       v-model="datetime"
       type="text"
       :style="{
-        marginLeft: '1rem',
+        marginLeft: '0.7rem',
         border: 'none',
         borderRadius: '3px',
         backgroundColor: '#edf4ff',
@@ -183,10 +183,4 @@ export default {
 
 <style lang="scss" scoped>
 @import url("http://cdn.font-store.ir/behdad.css");
-.for-input {
-  display: inline-block;
-  border: none;
-  padding: 0.35rem;
-  width: 90%;
-}
 </style>
