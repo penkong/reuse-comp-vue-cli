@@ -17,7 +17,7 @@
           </template>
         </Vselect>
       </div>
-      <div class="input-container">
+      <div class="input-container" v-if="allowInput">
         <input
           :readonly="read"
           :disable="notEditable"
@@ -102,6 +102,10 @@ export default {
     Vselect
   },
   props: {
+    allowInput: {
+      type: Boolean,
+      default: true
+    },
     m: {
       type: String,
       validator: v => ["r", "e", "ne"].includes(v),
@@ -282,30 +286,7 @@ export default {
   justify-content: center;
   position: relative;
   font-size: 0.8rem;
-  .q-field--dense .q-field__control {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #0070cc;
 
-    height: 20px !important;
-    width: 3rem;
-    padding: 0 3px !important;
-    font-size: 1rem;
-  }
-  .q-field__inner {
-    max-width: 3.5rem;
-  }
-
-  .q-icon,
-  .material-icons {
-    // margin-bottom: 0.6rem;
-    // margin-left: -0.6rem;
-    position: absolute;
-    right: 0;
-    top: -2px;
-    .text-negative {
-      background-color: red;
-    }
-  }
   .style-chooser .vs__search::placeholder,
   .style-chooser .vs__dropdown-toggle,
   .style-chooser .vs__dropdown-menu {
