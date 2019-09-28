@@ -11,6 +11,7 @@
     :widthOfInput="widthOfInput"
     :widthOfRow="widthOfRow"
     :errorlabel="errorlabel"
+    :icon="icon"
     :colored="color"
     :c="c"
     :minChar="minChar"
@@ -21,7 +22,7 @@
 <style></style>
 
 <script>
-import SafaInput from "./components/SafaInput/SafaInput";
+import SafaInput from "../components/SafaInput/SafaInput";
 export default {
   name: "PageIndex",
   components: {
@@ -40,7 +41,8 @@ export default {
       maxChar: 65,
       minChar: 3,
       // it must be base on quasar icon name
-      color: "#edf4ff",
+      icon: "event",
+      color: "rgb(236, 236, 236)",
       //rem
       widthOfRow: "13",
       widthOfInput: "12",
